@@ -16745,6 +16745,11 @@ memory usage: 500.8 MB
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Investigate the variance accounted for by each principal component.</span>
+<span class="c1"># IMPORTANT NOTE: Please note, that my mentor and I both think, that the array returned by pca.explained_variance_ratio_</span>
+<span class="c1"># contains the marginal explained variances and NOT the cumulative explained variance. This is due to the fact, that the</span>
+<span class="c1"># the cumulative explained variance would have to converge to 1 (which the graph doesn&#39;t) while the marginal explained variance</span>
+<span class="c1"># would have to converge to 0 (which the graph does). Therefore I think I read the plot right. If I am wrong, could you please</span>
+<span class="c1"># explain how I misunderstood?</span>
 <span class="n">accounted_variance</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">accounted_variance</span><span class="p">)</span>
